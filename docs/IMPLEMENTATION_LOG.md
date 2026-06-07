@@ -135,3 +135,88 @@ Alternative implementation tranche once documentation baseline is accepted:
 ```text
 PH01-C6-T01 — Implement minimal gsd init/status CLI commands
 ```
+
+## 2026-06-07 — PH00-C10-T01 — Add brownfield assessment scaffold
+
+### Classification
+
+- Project: Governed Spec-Driven Development
+- Phase: PH00 — Governance Baseline
+- Component: C10 — Examples / Brownfield Reference Patterns
+- Workstream: Brownfield assessment scaffold
+- Tranche: T01 — Add brownfield assessment scaffold
+- Risk level: Low
+- Branch: main
+
+### Goal
+
+Add the missing brownfield assessment artifact required by the brownfield workflow, plus a reusable base template for future brownfield repository inspections.
+
+### Files changed
+
+- `docs/BROWNFIELD_ASSESSMENT.md`
+- `templates/base/BROWNFIELD_ASSESSMENT.md`
+- `docs/RISK_REGISTER.md`
+- `docs/IMPLEMENTATION_LOG.md`
+- `docs/RESUME_MARKER.md`
+
+### Work completed
+
+- Added `docs/BROWNFIELD_ASSESSMENT.md` for the current GSD repository.
+- Added `templates/base/BROWNFIELD_ASSESSMENT.md` as a reusable scaffold for future brownfield inspections.
+- Added brownfield-specific risks to `docs/RISK_REGISTER.md`.
+- Updated implementation log and resume marker for this tranche.
+
+### Commands run
+
+```bash
+# Repository operations performed through the GitHub connector:
+# - fetch_file docs/BROWNFIELD_WORKFLOW.md
+# - fetch_file docs/RESUME_MARKER.md
+# - fetch_file docs/RISK_REGISTER.md
+# - fetch_file docs/IMPLEMENTATION_LOG.md
+# - fetch_file docs/BROWNFIELD_ASSESSMENT.md
+# - fetch_file templates/base/BROWNFIELD_ASSESSMENT.md
+# - create_file docs/BROWNFIELD_ASSESSMENT.md
+# - create_file templates/base/BROWNFIELD_ASSESSMENT.md
+# - update_file docs/RISK_REGISTER.md
+# - update_file docs/IMPLEMENTATION_LOG.md
+# - update_file docs/RESUME_MARKER.md
+```
+
+### Validation
+
+- Documentation-only tranche.
+- Verified that `docs/BROWNFIELD_ASSESSMENT.md` and `templates/base/BROWNFIELD_ASSESSMENT.md` were absent before creating them.
+- Confirmed the brownfield workflow requires `docs/BROWNFIELD_ASSESSMENT.md`.
+- Used fresh file SHAs before updating existing files.
+- No functional CLI or production behavior changed.
+
+### Issues encountered
+
+- No blocking issues.
+- Repository tree listing remains connector-limited, so this tranche used targeted file fetches.
+
+### Documentation updated
+
+- `docs/BROWNFIELD_ASSESSMENT.md`
+- `templates/base/BROWNFIELD_ASSESSMENT.md`
+- `docs/RISK_REGISTER.md`
+- `docs/IMPLEMENTATION_LOG.md`
+- `docs/RESUME_MARKER.md`
+
+### Resume point
+
+Next recommended implementation tranche:
+
+```text
+PH01-C6-T01 — Implement minimal gsd init/status CLI commands
+```
+
+Possible follow-on governance/tooling tranches:
+
+```text
+PH01-C6-T02 — Add gsd inspect command skeleton
+PH05-C9-T01 — Add shell smoke tests for gsd CLI
+PH00-C10-T02 — Add brownfield example repository scaffold
+```
