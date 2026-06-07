@@ -7,3 +7,7 @@
 | R003 | High-risk domains use generic templates | Missing safety controls | Domain presets | Open |
 | R004 | Spec Kit integration treated as replacement for GSD | Governance gaps | Document relationship clearly | Open |
 | R005 | Chat reasoning not captured in repo | Lost operational memory | Implementation log and resume marker | Open |
+| R006 | Release made before CLI contract is stable | False assurance and premature adoption | Use pre-release versioning and require release checklist completion | Open |
+| R007 | Version tags drift from documented release state | Confusion about implemented capability | Require changelog, implementation log, and resume marker alignment before tagging | Open |
+| R008 | Templates or examples released with sensitive or real-world data | Privacy, confidentiality, or security exposure | Require security/privacy review and fake example values only | Open |
+| R009 | Release notes overstate implemented capabilities | Users rely on non-existent functionality | Require explicit known limitations and validation evidence in release notes | Open |
