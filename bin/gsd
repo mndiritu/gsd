@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+cmd="${1:-help}"
+
+case "$cmd" in
+  help|-h|--help)
+    cat <<'HELP'
+gsd — Governed Spec-Driven Development CLI placeholder
+
+Current status:
+  PH00-C1-T01 — Foundational scaffold
+
+Planned commands:
+  gsd init
+  gsd inspect
+  gsd status
+  gsd new-feature
+  gsd tranche
+  gsd preflight
+  gsd close
+
+This placeholder will be implemented in:
+  PH01-C6-T01 — Implement minimal gsd init/status CLI commands
+HELP
+    ;;
+  status)
+    if [[ -f docs/RESUME_MARKER.md ]]; then
+      sed -n '1,120p' docs/RESUME_MARKER.md
+    else
+      echo "No docs/RESUME_MARKER.md found."
+      exit 1
+    fi
+    ;;
+  *)
+    echo "Unknown command: $cmd" >&2
+    echo "Run: gsd help" >&2
+    exit 2
+    ;;
+esac

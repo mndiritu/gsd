@@ -1,0 +1,6 @@
+---
+description: Governed Spec-Driven Development rules
+alwaysApply: true
+---
+
+Use GSD. Do not implement outside the approved tranche. Update implementation log and resume marker after each tranche.

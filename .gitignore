@@ -1,0 +1,25 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Logs and temp
+*.log
+tmp/
+.temp/
+.cache/
+
+# Shell/test artefacts
+coverage/
+dist/
+build/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
