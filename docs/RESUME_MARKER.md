@@ -3,12 +3,12 @@
 ## Current safe resume point
 
 ```text
-PH00-C11-T02 — Add release management scaffold
+PH00-C10-T01 — Add brownfield assessment scaffold
 ```
 
 ## Current safe state
 
-The repository remains in Phase 00 governance baseline. A foundational GSD scaffold exists, and release-management governance has now been added.
+The repository remains in Phase 00 governance baseline. A foundational GSD scaffold exists, release-management governance has been added, and the brownfield assessment scaffold now exists.
 
 Current state includes:
 
@@ -26,6 +26,8 @@ Current state includes:
 - expanded release policy;
 - release checklist;
 - changelog;
+- brownfield assessment artifact;
+- reusable brownfield assessment template;
 - base templates;
 - spec templates;
 - agent templates;
@@ -35,7 +37,7 @@ Current state includes:
 ## Last completed tranche
 
 ```text
-PH00-C11-T02 — Add release management scaffold
+PH00-C10-T01 — Add brownfield assessment scaffold
 ```
 
 ## Current branch
@@ -46,9 +48,8 @@ main
 
 ## Files changed in last tranche
 
-- `CHANGELOG.md`
-- `docs/RELEASE_CHECKLIST.md`
-- `docs/RELEASE_POLICY.md`
+- `docs/BROWNFIELD_ASSESSMENT.md`
+- `templates/base/BROWNFIELD_ASSESSMENT.md`
 - `docs/RISK_REGISTER.md`
 - `docs/IMPLEMENTATION_LOG.md`
 - `docs/RESUME_MARKER.md`
@@ -56,7 +57,8 @@ main
 ## Tests/validation run
 
 - Documentation-only validation.
-- Confirmed `CHANGELOG.md` and `docs/RELEASE_CHECKLIST.md` were absent before creation.
+- Confirmed `docs/BROWNFIELD_ASSESSMENT.md` and `templates/base/BROWNFIELD_ASSESSMENT.md` were absent before creation.
+- Confirmed the brownfield workflow requires `docs/BROWNFIELD_ASSESSMENT.md`.
 - Used fresh file SHAs before updating existing files.
 - No functional CLI or production behavior changed.
 
@@ -64,33 +66,34 @@ main
 
 - The CLI remains a placeholder.
 - No shell test suite exists yet.
-- `docs/BROWNFIELD_ASSESSMENT.md` is required by the brownfield workflow but has not yet been added.
+- CI is not yet implemented.
 - No public package or GitHub release has been produced.
 - Agent orchestration is not implemented.
 - Spec Kit bridge is not implemented.
+- Brownfield assessment command behavior is not yet implemented in `bin/gsd`.
 
 ## Next natural tranche
 
-Recommended documentation/governance tranche:
-
-```text
-PH00-C10-T01 — Add brownfield assessment scaffold
-```
-
-Alternative implementation tranche once documentation baseline is accepted:
+Recommended implementation tranche:
 
 ```text
 PH01-C6-T01 — Implement minimal gsd init/status CLI commands
 ```
 
+Possible follow-on governance/tooling tranches:
+
+```text
+PH01-C6-T02 — Add gsd inspect command skeleton
+PH05-C9-T01 — Add shell smoke tests for gsd CLI
+PH00-C10-T02 — Add brownfield example repository scaffold
+```
+
 ## Do not proceed to
 
-Do not implement agent orchestration, Spec Kit bridge, packaging, public release automation, or high-risk automation until the minimal CLI contract and validation approach are defined and validated.
+Do not implement agent orchestration, Spec Kit bridge, packaging, public release automation, destructive workflow automation, or high-risk automation until the minimal CLI contract and validation approach are defined and validated.
 
 ## Notes for next AI agent
 
 Start by reading the required governance files in `AGENTS.md`.
 
-If continuing documentation hardening, address the missing brownfield assessment artifact before deeper CLI automation.
-
-If continuing CLI implementation, constrain work to the approved `PH01-C6-T01` tranche and do not add release automation, agent orchestration, or Spec Kit integration in the same tranche.
+The brownfield assessment artifact now exists. If continuing CLI implementation, constrain work to the approved `PH01-C6-T01` tranche and do not add release automation, agent orchestration, Spec Kit integration, or full brownfield inspection behavior in the same tranche.
